@@ -9,26 +9,28 @@ import Button from "../ui/Button"; // Assuming you have the Button component
 
 // Define social links (using text links for simplicity without specific icons)
 const socialLinks = [
-  { name: "Instagram", ariaLabel: "Follow A7 Laundry on Instagram" }, // Replace # with actual URL
-  { name: "Facebook", ariaLabel: "Follow A7 Laundry on Facebook" }, // Replace # with actual URL
+  {
+    name: "Instagram",
+    ariaLabel: "Follow A7 Laundry on Instagram",
+    link: "https://www.instagram.com/a7laundry/",
+  },
   {
     name: "Google Reviews",
-
     ariaLabel: "Read A7 Laundry Google Reviews",
-  }, // Replace # with actual URL
+    link: "https://www.google.com/search?q=A7+Laundry+Winter+Garden+FL#lrd=0x88e8e91e92e9b5bb:0xe3baf39952489c9a,1,,,", // Example link (replace with actual)
+  },
 ];
 
 // Direct Google Maps link for the address
 const googleMapsLink =
   "https://www.google.com/maps/search/?api=1&query=10097+Tuller+Loop,+Winter+Garden,+FL+34787";
 // WhatsApp link (replace with your actual number in international format without + or spaces)
-const whatsappNumber = "+14076708839"; // EXAMPLE NUMBER - REPLACE
+const whatsappNumber = "14076708839"; // EXAMPLE NUMBER - REPLACE
 const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hello%20A7%20Laundry!%20I'd%20like%20to%20know%20more%20about%20your%20services.`; // Pre-filled message
 
 const Contact: React.FC = () => {
   return (
     <section id="contact" className="bg-zinc-50 py-16 sm:py-24 scroll-mt-16">
-      {" "}
       {/* ID and scroll margin */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -109,13 +111,13 @@ const Contact: React.FC = () => {
                 {socialLinks.map((link) => (
                   <a
                     key={link.name}
+                    href={link.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={link.ariaLabel}
                     className="text-zinc-500 hover:text-blue-600 transition-colors duration-150 hover:cursor-pointer"
                   >
                     {link.name} {/* Displaying name instead of icons */}
-                    {/* If using react-icons or SVGs, you'd put the icon component here */}
                   </a>
                 ))}
               </div>
@@ -128,9 +130,13 @@ const Contact: React.FC = () => {
           <h3 className="text-2xl font-bold tracking-tight sm:text-3xl mb-6">
             Ready for effortless laundry?
           </h3>
-          <Button variant="primary" size="lg">
-            Book Your Pickup Now
-          </Button>
+          <a href="/pickup-page">
+            {" "}
+            {/* Replace with actual pickup page URL */}
+            <Button variant="primary" size="lg">
+              Book Your Pickup Now
+            </Button>
+          </a>
         </div>
       </div>
     </section>

@@ -1,5 +1,16 @@
 import React from "react";
 import Button from "../ui/Button";
+import Link from "next/link";
+
+// WhatsApp Info
+const whatsappNumber = "14076708839"; // No plus sign
+
+const specialistMessage = encodeURIComponent(
+  "Hi! I'm interested in learning more about your laundry services. Can I speak with a specialist?"
+);
+const scheduleMessage = encodeURIComponent(
+  "Hello! I'd like to schedule a laundry pickup. Can you help me with that?"
+);
 
 const Hero: React.FC = () => {
   return (
@@ -12,7 +23,7 @@ const Hero: React.FC = () => {
 
       {/* Content */}
       <div className="relative z-20 container mx-auto px-4 text-center py-20 md:py-32">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold  tracking-tight text-white mb-6 drop-shadow-md leading-tight max-w-5xl mx-auto">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 drop-shadow-md leading-tight max-w-5xl mx-auto">
           Premium laundry in Winter Garden with free pickup & delivery!
         </h1>
 
@@ -23,12 +34,27 @@ const Hero: React.FC = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Button variant="primary" size="lg">
-            Schedule Now
-          </Button>
-          <Button variant="secondary" size="lg">
-            Talk to a Specialist
-          </Button>
+          {/* Schedule Now Button */}
+          <Link
+            href={`https://wa.me/${whatsappNumber}?text=${scheduleMessage}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="primary" size="lg">
+              Schedule Now
+            </Button>
+          </Link>
+
+          {/* Talk to Specialist Button */}
+          <Link
+            href={`https://wa.me/${whatsappNumber}?text=${specialistMessage}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="secondary" size="lg">
+              Talk to a Specialist
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

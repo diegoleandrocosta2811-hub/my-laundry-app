@@ -11,6 +11,13 @@ import {
   ArrowLongRightIcon, // Icon for section header
 } from "@heroicons/react/24/outline";
 import Button from "../ui/Button"; // Import the button
+import Link from "next/link";
+
+// WhatsApp setup
+const whatsappNumber = "14076708839";
+const businessQuoteMessage = encodeURIComponent(
+  "Hi! I'm interested in A7 Laundry's commercial services. Can you send me a business quote or more details?"
+);
 
 const residentialServices = [
   {
@@ -68,8 +75,6 @@ const commercialServices = [
 const Services: React.FC = () => {
   return (
     <section id="services" className="bg-white py-16 sm:py-24 scroll-mt-16">
-      {" "}
-      {/* Added ID and scroll margin */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Section Header */}
         <div className="text-center mb-12 lg:mb-16">
@@ -119,7 +124,7 @@ const Services: React.FC = () => {
 
         {/* Commercial Services */}
         <div>
-          <h3 className="text-2xl flex items-center gap-2  font-semibold leading-tight text-zinc-800 mb-8 text-center md:text-left">
+          <h3 className="text-2xl flex items-center gap-2 font-semibold leading-tight text-zinc-800 mb-8 text-center md:text-left">
             <ArrowLongRightIcon className="w-6 h-6" />
             For Your Business
           </h3>
@@ -129,18 +134,13 @@ const Services: React.FC = () => {
                 key={service.name}
                 className="flex items-start space-x-4 p-6 bg-blue-50 rounded-xl border border-blue-100"
               >
-                {" "}
-                {/* Slightly different bg */}
                 {/* Icon */}
                 <div className="flex-shrink-0">
                   <span className="flex items-center justify-center h-10 w-10 rounded-lg bg-blue-200">
-                    {" "}
-                    {/* Different icon bg */}
                     <service.icon
                       className="h-5 w-5 text-blue-700"
                       aria-hidden="true"
-                    />{" "}
-                    {/* Different icon color */}
+                    />
                   </span>
                 </div>
                 {/* Text Content */}
@@ -158,11 +158,15 @@ const Services: React.FC = () => {
 
           {/* Commercial CTA Button */}
           <div className="mt-10 text-center">
-            <Button variant="primary" size="lg">
-              {" "}
-              {/* Adjust href if needed */}
-              Get a Business Plan Quote
-            </Button>
+            <Link
+              href={`https://wa.me/${whatsappNumber}?text=${businessQuoteMessage}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="primary" size="lg">
+                Get a Business Plan Quote
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

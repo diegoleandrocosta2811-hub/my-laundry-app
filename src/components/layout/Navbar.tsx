@@ -13,6 +13,16 @@ const navigation = [
   { name: "FAQ", href: "/#faq" },
 ];
 
+// Pre-filled WhatsApp messages
+const specialistMessage = encodeURIComponent(
+  "Hi! I'm interested in learning more about your laundry services. Can I speak with a specialist?"
+);
+const scheduleMessage = encodeURIComponent(
+  "Hello! I'd like to schedule a laundry pickup. Can you help me with that?"
+);
+
+const whatsappNumber = "14076708839"; // without '+'
+
 const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -31,7 +41,7 @@ const Navbar: React.FC = () => {
             />
           </Link>
 
-          {/* Desktop Links */}
+          {/* Desktop Navigation */}
           <div className="hidden lg:flex mr-auto space-x-8">
             {navigation.map((item) => (
               <Link
@@ -44,17 +54,29 @@ const Navbar: React.FC = () => {
             ))}
           </div>
 
-          {/* Desktop CTA */}
+          {/* Desktop CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="secondary" size="sm">
-              Talk to Specialist
-            </Button>
-            <Button variant="primary" size="sm">
-              Schedule Now
-            </Button>
+            <Link
+              href={`https://wa.me/${whatsappNumber}?text=${specialistMessage}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="secondary" size="sm">
+                Talk to Specialist
+              </Button>
+            </Link>
+            <Link
+              href={`https://wa.me/${whatsappNumber}?text=${scheduleMessage}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="primary" size="sm">
+                Schedule Now
+              </Button>
+            </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Toggle */}
           <div className="flex lg:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -71,7 +93,7 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Dropdown */}
+      {/* Mobile Dropdown Menu */}
       <div
         className={`lg:hidden transition-all duration-200 ease-in-out overflow-hidden ${
           isMobileMenuOpen ? "max-h-screen" : "max-h-0"
@@ -90,12 +112,24 @@ const Navbar: React.FC = () => {
           ))}
         </div>
         <div className="px-4 py-4 border-t border-zinc-100 space-y-3">
-          <Button variant="secondary" size="sm" className="w-full">
-            Talk to Specialist
-          </Button>
-          <Button variant="primary" size="sm" className="w-full">
-            Schedule Now
-          </Button>
+          <Link
+            href={`https://wa.me/${whatsappNumber}?text=${specialistMessage}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="secondary" size="sm" className="w-full">
+              Talk to Specialist
+            </Button>
+          </Link>
+          <Link
+            href={`https://wa.me/${whatsappNumber}?text=${scheduleMessage}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="primary" size="sm" className="w-full">
+              Schedule Now
+            </Button>
+          </Link>
         </div>
       </div>
     </nav>
