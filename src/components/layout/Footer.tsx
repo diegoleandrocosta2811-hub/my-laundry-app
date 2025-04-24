@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
               className="h-auto w-full object-contain"
             />
           </div>
-          <div className="pt-20 md:order-2 md:mt-0">
+          <div className="lg:pt-20 pt-8 md:order-2 md:mt-0">
             <p className="text-center text-base">
               © {currentYear} A7 Laundry Orlando. All rights reserved.
             </p>

@@ -95,7 +95,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Dropdown Menu */}
       <div
-        className={`lg:hidden transition-all duration-200 ease-in-out overflow-hidden ${
+        className={`lg:hidden transition-all duration-200 ease-in-out overflow-hidden shadow-lg shadow-zinc-200 ${
           isMobileMenuOpen ? "max-h-screen" : "max-h-0"
         }`}
       >
@@ -111,13 +111,13 @@ const Navbar: React.FC = () => {
             </Link>
           ))}
         </div>
-        <div className="px-4 py-4 border-t border-zinc-100 space-y-3">
+        <div className="px-4 py-4 border-t border-zinc-100 space-y-4 flex flex-col">
           <Link
             href={`https://wa.me/${whatsappNumber}?text=${specialistMessage}`}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button variant="secondary" size="sm" className="w-full">
+            <Button variant="secondary" className="w-full">
               Talk to Specialist
             </Button>
           </Link>
@@ -126,7 +126,7 @@ const Navbar: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button variant="primary" size="sm" className="w-full">
+            <Button variant="primary" className="w-full">
               Schedule Now
             </Button>
           </Link>

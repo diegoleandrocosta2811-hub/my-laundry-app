@@ -125,14 +125,12 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        {/* Final Call to Action - Can be removed if redundant with WhatsApp button */}
+        {/* Final Call to Action - Book Pickup via WhatsApp */}
         <div className="mt-16 text-center">
           <h3 className="text-2xl font-bold tracking-tight sm:text-3xl mb-6">
             Ready for effortless laundry?
           </h3>
-          <a href="/pickup-page">
-            {" "}
-            {/* Replace with actual pickup page URL */}
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
             <Button variant="primary" size="lg">
               Book Your Pickup Now
             </Button>
