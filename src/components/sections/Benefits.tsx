@@ -1,15 +1,10 @@
 import React from "react";
 import {
   TruckIcon,
-  ClockIcon,
-  Cog6ToothIcon,
   SparklesIcon,
   ChatBubbleLeftRightIcon,
-  CubeTransparentIcon,
   BoltIcon,
   AdjustmentsHorizontalIcon,
-  ShieldCheckIcon,
-  LanguageIcon,
 } from "@heroicons/react/24/outline";
 
 const benefits = [
@@ -90,7 +85,7 @@ const Benefits: React.FC = () => {
         {/* Optional CTA */}
         <div className="mt-20 text-center">
           <p className="text-xl font-medium text-zinc-800 max-w-xl mx-auto leading-relaxed">
-            "Your time is gold. Let A7 take care of your laundry!"
+            &quot;Your time is gold. Let A7 take care of your laundry!&quot;
           </p>
         </div>
       </div>

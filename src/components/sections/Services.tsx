@@ -77,8 +77,8 @@ const Services: React.FC = () => {
             Comprehensive Laundry Solutions
           </h2>
           <p className="mt-2 text-4xl font-bold sm:text-5xl leading-tight max-w-5xl mx-auto tracking-tight">
-            Whether it's your weekly load or your business's bulk needs, we've
-            got you covered.
+            Whether it&#39;s your weekly load or your business&#39;s bulk needs,
+            we&#39;ve got you covered.
           </p>
         </div>
 

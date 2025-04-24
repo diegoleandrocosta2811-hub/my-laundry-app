@@ -1,6 +1,5 @@
 import React from "react";
-import { MapPinIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline"; // Keep MapPin, add MagnifyingGlass for CTA
-import Button from "../ui/Button"; // Import if adding a check button
+import { MapPinIcon } from "@heroicons/react/24/outline";
 
 const areas = [
   "Winter Garden",

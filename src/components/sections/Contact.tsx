@@ -22,7 +22,7 @@ const socialLinks = [
 const googleMapsLink =
   "https://www.google.com/maps/search/?api=1&query=10097+Tuller+Loop,+Winter+Garden,+FL+34787";
 // WhatsApp link (replace with your actual number in international format without + or spaces)
-const whatsappNumber = "14075551234"; // EXAMPLE NUMBER - REPLACE
+const whatsappNumber = "+14076708839"; // EXAMPLE NUMBER - REPLACE
 const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hello%20A7%20Laundry!%20I'd%20like%20to%20know%20more%20about%20your%20services.`; // Pre-filled message
 
 const Contact: React.FC = () => {
@@ -57,14 +57,11 @@ const Contact: React.FC = () => {
               The quickest way to get answers or schedule your pickup. Tap
               below!
             </p>
-            <Button
-              rel="noopener noreferrer"
-              variant="primary"
-              size="lg"
-              className="w-full" // Make button full width of its container
-            >
-              Talk to a Specialist
-            </Button>
+            <a href={whatsappLink} rel="noopener noreferrer">
+              <Button variant="primary" size="lg" className="w-full">
+                Talk to a Specialist
+              </Button>
+            </a>
           </div>
 
           {/* Column 2: Address & Map */}
@@ -132,8 +129,6 @@ const Contact: React.FC = () => {
             Ready for effortless laundry?
           </h3>
           <Button variant="primary" size="lg">
-            {" "}
-            {/* Adjust href */}
             Book Your Pickup Now
           </Button>
         </div>

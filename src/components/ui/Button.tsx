@@ -14,7 +14,7 @@ const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   // Base styles - adjusted for rounded look like Loom
-  let baseStyle =
+  const baseStyle =
     "inline-flex items-center justify-center font-semibold rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 transition ease-in-out duration-150 disabled:opacity-50 hover:cursor-pointer";
 
   // Size styles

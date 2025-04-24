@@ -53,7 +53,7 @@ const WhyChooseUs: React.FC = () => {
           <p className="mt-2 text-4xl font-extrabold sm:text-5xl tracking-tight">
             Why choose A7 Laundry?
           </p>
-          <p className="mt-6 text-lg text-zinc-700 leading-relaxed ">
+          <p className="mt-6 text-lg text-gray-700 leading-relaxed ">
             Experience laundry service designed around your convenience,
             quality, and peace of mind.
           </p>
@@ -67,10 +67,10 @@ const WhyChooseUs: React.FC = () => {
                 <feature.icon className="h-6 w-6 text-white" />
               </div>
               <div>
-                <p className="text-lg font-semibold text-zinc-900">
+                <p className="text-lg font-semibold text-gray-900">
                   {feature.name}
                 </p>
-                <p className="text-base text-zinc-700 mt-1">
+                <p className="text-base text-gray-700 mt-1">
                   {feature.description}
                 </p>
               </div>
@@ -80,9 +80,9 @@ const WhyChooseUs: React.FC = () => {
 
         {/* Quote */}
         <div className="mt-20 text-center border-t border-blue-200 pt-10">
-          <p className="text-2xl font-semibold italic text-zinc-800 max-w-2xl mx-auto">
-            "We don’t just wash clothes. We give back your time, your peace of
-            mind, and your trust."
+          <p className="text-2xl font-semibold italic text-gray-800 max-w-2xl mx-auto">
+            &quot;We don&#39;t just wash clothes. We give back your time, your
+            peace of mind, and your trust.&quot;
           </p>
         </div>
       </div>

@@ -5,7 +5,7 @@ import { ChatBubbleLeftRightIcon } from "@heroicons/react/24/outline"; // Icon f
 const testimonials = [
   {
     quote:
-      "I haven’t stepped into a laundromat since I found A7! Fast and flawless service.",
+      "I haven&#39;t stepped into a laundromat since I found A7! Fast and flawless service.",
     author: "Matthew", // Using generic names for now
     location: "Winter Garden", // Adding optional location detail
     rating: 5, // Optional rating out of 5

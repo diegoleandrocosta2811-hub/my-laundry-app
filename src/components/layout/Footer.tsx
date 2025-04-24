@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 // Import social icons if needed (e.g., from react-icons or SVGs)
 
